@@ -1,0 +1,15 @@
+services:
+  - type: web
+    name: cafe-bot
+    runtime: docker
+    env: python
+    build:
+      dockerfile: Dockerfile
+    envVars:
+      - key: TELEGRAM_TOKEN
+        value: YOUR_TELEGRAM_TOKEN
+      - key: GOOGLE_API_KEY
+        value: YOUR_GOOGLE_API_KEY
+      - key: WEBHOOK_URL
+        value: https://cafe-bot.onrender.com
+    port: 10000
